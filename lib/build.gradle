@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
-
+def cfg = rootProject.ext.android // 配置
+def libs = rootProject.ext.dependencies // 库
 android {
     compileSdkVersion 26
     buildToolsVersion "27.0.3"
@@ -12,7 +13,7 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
+     
     }
 
     buildTypes {
@@ -26,10 +27,10 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile "${libs.appcompatv7}"
+    compile "${libs.constraint}"
     testCompile 'junit:junit:4.12'
     androidTestCompile('com.android.support.test.espresso:espresso-core:3.0.1', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-
 }

@@ -1,4 +1,4 @@
-package pr.tongson.app3;
+package pr.tongson.app;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,18 +8,19 @@ import android.widget.TextView;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 
-@Route(path = "/test/activity3")
-public class MainActivity extends AppCompatActivity {
+@Route(path = "/test/activity")
+public class Main2Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main2);
+
         TextView nextTv=findViewById(R.id.tv_next);
         nextTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ARouter.getInstance().build("/test/activity").navigation();
+                ARouter.getInstance().build("/test/activity1").navigation();
             }
         });
     }
