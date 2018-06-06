@@ -9,6 +9,11 @@
 /build/
 /captures
 .vscode/
+gradlew
+gradlew.bat
+gradle/*
+
+
 
 # Taken from Android.gitignore https://github.com/github/gitignore/blob/master/Android.gitignore
 #
